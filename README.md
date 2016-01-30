@@ -22,3 +22,8 @@ Generators
 ----------
 - `november g model <model-name>` will generate new models with CRUD actions
 - `november g action <action-name>` will generate new actions
+
+
+Other
+----------
+Check config for DB name
