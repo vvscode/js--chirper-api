@@ -2,8 +2,7 @@ var express = require('express');
 var bodyParser = require('body-parser');
 
 var accessControls = require('./access-controls');
-var loadDatabase   = require('./sequelize');
-
+var loadDatabase = require('./sequelize');
 
 module.exports = function(app) {
 

@@ -1,9 +1,9 @@
 module.exports = function(req, res, render) {
 
-  req.models.user
+  req.models.chirp
     .findAll()
-    .then(function(users) {
-      render(users);
+    .then(function(chirps) {
+      render(chirps);
     })
     .catch(function(err) {
       render(err);

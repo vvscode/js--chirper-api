@@ -1,14 +1,14 @@
 'use strict';
 
-var fs        = require('fs');
-var path      = require('path');
+var fs = require('fs');
+var path = require('path');
 var Sequelize = require('sequelize');
-var inflect   = require('inflect');
+var inflect = require('inflect');
 var ssaclAttributeRoles = require('ssacl-attribute-roles');
-var basename  = path.basename(module.filename);
-var env       = process.env.NODE_ENV || 'development';
-var config    = require(__dirname + '/../../config/config.json')[env];
-var db        = {};
+var basename = path.basename(module.filename);
+var env = process.env.NODE_ENV || 'development';
+var config = require(__dirname + '/../../config/config.json')[env];
+var db = {};
 var sequelize;
 
 // Create database connection

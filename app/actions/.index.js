@@ -1,10 +1,10 @@
 'use strict';
 
-var fs        = require('fs');
-var path      = require('path');
-var inflect   = require('inflect');
-var basename  = path.basename(module.filename);
-var controls  = {};
+var fs = require('fs');
+var path = require('path');
+var inflect = require('inflect');
+var basename = path.basename(module.filename);
+var controls = {};
 
 fs
   .readdirSync(__dirname)

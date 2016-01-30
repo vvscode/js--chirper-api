@@ -1,13 +1,13 @@
 module.exports = function(req, res, render) {
 
-  req.models.user.find({
+  req.models.chirp.find({
       where: {
-        id: req.params.user_id
+        id: req.params.chirp_id
       }
     })
-    .then(function(user) {
+    .then(function(chirp) {
       render({
-        model: user
+        model: chirp
       });
     })
     .catch(function(err) {

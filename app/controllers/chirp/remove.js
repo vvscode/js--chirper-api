@@ -1,12 +1,12 @@
 module.exports = function(req, res, render) {
 
-  req.models.user.find({
+  req.models.chirp.find({
       where: {
-        id: req.params.user_id
+        id: req.params.chirp_id
       }
     })
-    .then(function(user) {
-      return user.destroy();
+    .then(function(chirp) {
+      return chirp.destroy();
     })
     .then(function() {
       res.json({});
