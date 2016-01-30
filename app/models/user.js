@@ -19,6 +19,20 @@ module.exports = function(sequelize, DataTypes) {
             allowNull: false
           }
         });
+
+        models.user.belongsToMany(models.user, {
+          as: 'followees',
+          through: models.follow,
+          foreignKey: 'follower_id',
+          otherKey: 'followee_id'
+        });
+
+        models.user.belongsToMany(models.user, {
+          as: 'followers',
+          through: models.follow,
+          foreignKey: 'followee_id',
+          otherKey: 'follower_id'
+        });
       }
     },
     underscored: true,
