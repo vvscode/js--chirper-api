@@ -1,5 +1,6 @@
 var express = require('express');
 var bodyParser = require('body-parser');
+var userFromToken  = require('./user-from-token');
 
 var accessControls = require('./access-controls');
 var loadDatabase = require('./sequelize');
