@@ -33,4 +33,7 @@ module.exports = function(app) {
   // Signup
   app.post('/signup', actions.signup);
 
+  // Login
+  app.post('/login', actions.login);
+
 };

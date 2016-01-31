@@ -19,4 +19,6 @@ module.exports = function(app) {
   // Load the models and their relations
   app.use(loadDatabase);
 
+  app.use(require('express-bearer-token')());
+  app.use(userFromToken);
 };
