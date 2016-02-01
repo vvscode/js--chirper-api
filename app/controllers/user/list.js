@@ -6,6 +6,11 @@ module.exports = function(req, res, render) {
     return render("You're not logged in!");
   }
 
+  if (req.query.username) {
+    findQuery = {
+      where: { username: req.query.username }
+    }
+  }
   // Get the user from the token
   if (req.query.me) {
     findQuery = {
