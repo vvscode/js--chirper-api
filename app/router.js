@@ -36,4 +36,10 @@ module.exports = function(app) {
   // Login
   app.post('/login', actions.login);
 
+  // Follow
+  app.post('/follow', actions.follow);
+
+  // Unfollow
+  app.post('/unfollow', actions.unfollow);
+
 };
